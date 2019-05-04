@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class Vet {
+    
     public final static int MAX = 8;
 
 	//attributes
@@ -13,7 +14,14 @@ public class Vet {
 
 	private ArrayList<Owner> owners;
 
+    private ArrayList<Service> serviceVet;
+
 	//builder
+    /**
+     * [Vet description]
+     * @param  name [description]
+     * @return      [description]
+     */
     public Vet (String name) {
 
     	this.name = name;
@@ -22,28 +30,48 @@ public class Vet {
 
     	owners = new ArrayList<Owner>();
   	
+        serviceVet = new ArrayList<Service> serviceVet;
 
     }
 
     //getters
+    /**
+     * [getname description]
+     * @return [description]
+     */
     public String getname() {
     
     	return name; }
 
+    /**
+     * [getOwners description]
+     * @return [description]
+     */
     public ArrayList<Owner> getOwners() {
 
     	return owners; }
 
     //setters
+    /**
+     * [setname description]
+     * @param name [description]
+     */
     public void setname(String name) {
     
     	this.name = name; }
 
+    /**
+     * [setOwners description]
+     * @param owners [description]
+     */
     public void setOwners(ArrayList<Owner> owners) {
 
     	this.owners = owners; }
 
-
+    /**
+     * [addOwner description]
+     * @return [description]
+     */
     public String addOwner() {
 
        String msg = "";
@@ -51,6 +79,10 @@ public class Vet {
         return msg;
     }
 
+    /**
+     * [availableRoom description]
+     * @return [description]
+     */
     public String availableRoom() {
 
         String msg = "";
@@ -58,6 +90,10 @@ public class Vet {
         return msg;
     }
 
+    /**
+     * [dataOwnerPetInpatient description]
+     * @return [description]
+     */
     public String dataOwnerPetInpatient() {
 
         String msg = "";
@@ -65,6 +101,10 @@ public class Vet {
         return msg;
     }
 
+    /**
+     * [highInpatient description]
+     * @return [description]
+     */
     public String highInpatient() {
 
         String msg = "";
@@ -72,6 +112,10 @@ public class Vet {
         return msg;
     }
 
+    /**
+     * [numberRoomPet description]
+     * @return [description]
+     */
     public int numberRoomPet() {
 
         int msg = "";
