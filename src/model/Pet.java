@@ -18,6 +18,10 @@ public class Pet {
 
 	private double weight;
 
+    private double height;
+
+    private int id;
+
 	//relation
     private ClinicalRecord clinicalR;
 
@@ -30,7 +34,7 @@ public class Pet {
      * @param  weight  [description]
      * @return         [description]
      */
-	public Pet (String name, Pet typePet, int age, double weight) {
+	public Pet (String name, Pet typePet, int age, double weight, int id, double height) {
 
 		this.name = name;
 
@@ -83,6 +87,14 @@ public class Pet {
     
         return clinicalR; }
 
+    /**
+     * [getId description]
+     * @return [description]
+     */
+    public int getId() {
+    
+        return id; }
+
     //setters
     /**
      * [setName description]
@@ -125,6 +137,15 @@ public class Pet {
         this.clinicalR = clinicalR; } 
 
     /**
+     * [setId description]
+     * @param id [description]
+     */
+    public void setId (int id) {
+
+        this.id = id; }    
+
+    //Metodos funcionales.
+    /**
      * [newClinicalHistory description]
      * @return [description]
      */
@@ -133,6 +154,21 @@ public class Pet {
     
     	return msg;
     }
+
+    /**
+     *Description This method allows to calculate the body mass index for a pet.
+     *pre: The pet was created before and its attributes height and weight are not null neither height must be zero.
+     *post: The BMI is calculated.
+     *@return The pet body mass index. Returns -1 if the height is zero  due to the division on zero does not exist.
+     */
+    public double imcPet(){
+        double imc = 0.0;
+
+        imc = weight / (height * height);
+
+        return imc;
+    }
+
 
 
 }

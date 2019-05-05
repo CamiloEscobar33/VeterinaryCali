@@ -19,12 +19,12 @@ public class Owner {
 
     //builder
     /**
-     * [Owner description]
-     * @param  name     [description]
-     * @param  id       [description]
-     * @param  diretion [description]
-     * @param  phone    [description]
-     * @return          [description]
+     * Allows creat a owner of one or more pets. 
+     * @param  name - Enter the name of owner.
+     * @param  id  - Enter the id of owner.
+     * @param  diretion - Enter the diretion of owner.
+     * @param  phone  - Enter the phone of owner.
+     * @return  the objects.
      */
 	public Owner (String name, int id, String diretion, int phone) {
 
@@ -40,22 +40,42 @@ public class Owner {
 	}	
 
 	//getters
+    /**
+     * [getName description]
+     * @return [description]
+     */
 	public String getName (){
         
         return name; }
 
+    /**
+     * [getId description]
+     * @return [description]
+     */
     public int getId() {
     
         return id; }
 
+    /**
+     * [getDiretion description]
+     * @return [description]
+     */
     public String getDiretion() {
 	
 		return diretion; }
     
+    /**
+     * [getPhone description]
+     * @return [description]
+     */
     public int getPhone() {
     
         return phone; }
 
+    /**
+     * [getPets description]
+     * @return [description]
+     */
     public ArrayList<Pet> getPets () {
 
         return pets; }
