@@ -20,16 +20,19 @@ public class ClinicalHistory {
 	//relations 
 	private ArrayList<DrugsPrecription> drugsPrecription;
 
+	private Date dateEntry;
+
+	private Date dateExit;
 
 	//builder
 	/**
-	 * [ClinicalHistory description]
-	 * @param  type      [description]
-	 * @param  status    [description]
-	 * @param  weight    [description]
-	 * @param  symptom   [description]
-	 * @param  diagnosis [description]
-	 * @return           [description]
+	 * the builder allows creat a arrayList of medicine
+	 * @param  type - 
+	 * @param  status - enter if is closed or open the Clinical history.
+	 * @param  weight  - enter the weight of pet. 
+	 * @param  symptom - enter the symptom have the pet.
+	 * @param  diagnosis - enter the diagnosis of pet have.
+	 * @return  - the object create.
 	 */
 	public ClinicalHistory(String type, String status, double weight, String symptom, String diagnosis) {
 
@@ -45,41 +48,53 @@ public class ClinicalHistory {
 
 		drugsPrecription = new ArrayList<DrugsPrecription>;
 
+		dateEntry = new Date(day, month, year);
+
+		dateExit = new Date(day, month, year);
+
 	}
 
 	//getters
-	/**
-	 * @return [description]
+	/**Allows to obtain the date entry the pet.
+	 * @return double - the date entry of the pet.  
 	 */
-    public double getdateEntry() {
+    public Date getdateEntry() {
 	
 		return dateEntry; }
 
-    /**
-	 * @return [description]
+    /**Allows to obtain 
+	 * @return double - the
 	 */
-    public double getsymptom() {
+    public String getsymptom() {
     
         return symptom; }
 
     /**
 	 * @return [description]
 	 */
-    public double getdiagnosis() {
+    public String getdiagnosis() {
 	
 		return diagnosis; }
-    
-    /**
-	 * @return [description]
-	 */
-    public double getdrugsPrecription() {
-	
-		return drugsPrecription; }
 
 	/**
 	 * @return [description]
 	 */
-    public ArrayList<DrugsPrecription> getDrugsPrecription () {
+    public String getStatus() {
+	
+		return status; }
+
+    
+    /**
+	 * @return [description]
+	 */
+    public Date getDateExit() {
+	
+		return dateExit; }
+
+	/**
+	 * @return [description]
+	 */
+    public ArrayList<Medicine> getDrugsPrecription () {
 
     	return drugsPrecription; }
 
@@ -104,19 +119,14 @@ public class ClinicalHistory {
     public void setdiagnosis (int diagnosis ) {
 
         this.diagnosis = diagnosis; }
-    /**
-     * @param drugsPrecription [description]
-     */
-    public void setdrugsPrecription (int drugsPrecription ) {
-
-        this.drugsPrecription = drugsPrecription; }
-
-    /**
-     * @param drugsPrecription [description]
-     */
-    public void sethospitalizations (ArrayList<DrugsPrecription> drugsPrecription) {
     
-    	this.hospitalizations = hospitalizations; }
+
+    /**
+     * @param drugsPrecription [description]
+     */
+    public void setDrugsPrecription (ArrayList<Medicine> drugsPrecription) {
+    
+    	this.drugsPrecription = drugsPrecription; }
     
     /**
      * @return [description]

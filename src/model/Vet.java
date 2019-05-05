@@ -18,9 +18,9 @@ public class Vet {
 
 	//builder
     /**
-     * [Vet description]
-     * @param  name [description]
-     * @return      [description]
+     * the builder allows create mini rooms, owners, services.
+     * @param  name - the name of veterinary.
+     * @return  the objects creates.
      */
     public Vet (String name) {
 
@@ -36,16 +36,16 @@ public class Vet {
 
     //getters
     /**
-     * [getname description]
-     * @return [description]
+     * Allows to obtain the name of veterinary.
+     * @return the name of veterinary.
      */
     public String getname() {
     
     	return name; }
 
     /**
-     * [getOwners description]
-     * @return [description]
+     * Allows to obtain the owners of the pets.
+     * @return the object owner.
      */
     public ArrayList<Owner> getOwners() {
 
@@ -53,46 +53,66 @@ public class Vet {
 
     //setters
     /**
-     * [setname description]
-     * @param name [description]
+     * Allows to change the name of veterinary aunque se que este set no es necesario jaja(El sueño).
+     * @param name - enter the name you want to change.
      */
     public void setname(String name) {
     
     	this.name = name; }
 
     /**
-     * [setOwners description]
-     * @param owners [description]
+     * Allows to change the Owner.
+     * @param owners - enter the Owner you want to change.
      */
     public void setOwners(ArrayList<Owner> owners) {
 
     	this.owners = owners; }
 
     /**
-     * [addOwner description]
-     * @return [description]
+     * Allows add a Owner to arryList of Owners
+     * @param  name - the name of owner.
+     * @param  id  - the id of owner.
+     * @param  direction - the direction of owner.
+     * @param  phone  - the phone of owner.
+     * @return String - The message that 
      */
-    public String addOwner() {
+    public String addOwner(String name, int id, String direction, int phone) {
 
-       String msg = "";
+       String msg = ""; boolean oe = true;
+
+       for(int i = 0; i < owners.size() && oe = true; i++){
+       	if(owners.get(i) == null){
+       		add.(new Owner(name, id, direction, phone));
+       		msg = "Se ha agregado correctamente el dueño";
+       		oe = false;
+       	}
+       }
 
         return msg;
     }
 
     /**
-     * [availableRoom description]
-     * @return [description]
+     * Allows look that rooms are free.
+     * @return String - the numbers the rooms free.
      */
     public String availableRoom() {
 
-        String msg = "";
+        String msg = ""; 
+
+        for(int i = 0; i < miniroom.length; i++){
+        	if(miniroom[i] == null){
+        		msg = "los cuartos libres son " + miniroom[i];
+        	} else {
+        		msg = "no hay mini cuartos libres."
+        	}
+        }
 
         return msg;
     }
 
     /**
-     * [dataOwnerPetInpatient description]
-     * @return [description]
+     * Allows to obtain datas of Owner of pet.
+     * @return String - Data the Owner.
      */
     public String dataOwnerPetInpatient() {
 
@@ -102,8 +122,8 @@ public class Vet {
     }
 
     /**
-     * [highInpatient description]
-     * @return [description]
+     * Allows sign out to a pacient.
+     * @return String - sign out of the inpatient.
      */
     public String highInpatient() {
 
@@ -127,8 +147,8 @@ public class Vet {
      *Description This method allows to update the basic data of a veterinary client, these data include, address and phone number.
      *pre: The client was created before.
      *post: The address and /or phone number of the client is updated.
-     *@param The new address of the client. This param could be empty.
-     *@param The new phone number of the client. This param could be empty.
+     *@param direction - the new address of the client. This param could be empty.
+     *@param phone - the new phone number of the client. This param could be empty.
      */
     public void updateData(String direction, int phone){
 

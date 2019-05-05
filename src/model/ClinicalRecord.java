@@ -17,11 +17,11 @@ public class ClinicalRecord {
 
 	//builder
 	/**
-	 * [Pet description]
-	 * @param  nameOwner [description]
-	 * @param  idOwner   [description]
-	 * @param  namePet   [description]
-	 * @return           [description]
+	 * the builder allows create a arrayList of Clinical History.
+	 * @param  nameOwner - enter the name of Owner of pet.
+	 * @param  idOwner  - enter the id of owner.
+	 * @param  namePet  - enter the name of pet or pets.
+	 * @return - the objects creats.
 	 */
 	public Pet (String nameOwner, int idOwner, String namePet) {
 
@@ -37,32 +37,32 @@ public class ClinicalRecord {
 
 	//getters
 	/**
-	 * [getNameOwner description]
-	 * @return [description]
+	 * Allows to obtain the name of owner.
+	 * @return String - the name of owner of the pet.
 	 */
 	public String getNameOwner (){
         
         return nameOwner; }
 
     /**
-     * [getIdOwner description]
-     * @return [description]
+     * Allows to obtain the id od owner.
+     * @return int - the id of owner.
      */
     public int getIdOwner() {
     
         return idOwner; }
 
     /**
-     * [getNamePet description]
-     * @return [description]
+     * Allows to obtain the name of pet of the owner.
+     * @return String - the name of pet.
      */
     public String getNamePet() {
 	
 		return namePet; }
 
 	/**
-	 * [getClinicalH description]
-	 * @return [description]
+	 * Allows to obtain the clinical History of pet.
+	 * @return ArrtList<CLinicalH> - a ArryList of clinical history.
 	 */
 	public ArrayList<ClinicalH> getClinicalH () {
 
@@ -70,31 +70,31 @@ public class ClinicalRecord {
     
     //setters
     /**
-     * [setNameOwner description]
-     * @param nameOwner [description]
+     * Allows to change the name of owner.
+     * @param nameOwner - enter the name of owner you want to change.
      */
     public void setNameOwner (String nameOwner) {
 
         this.nameOwner = nameOwner; }
     
     /**
-     * [setIdOwner description]
-     * @param idOwner [description]
+     * Allows to change the id of the owner.
+     * @param idOwner - enter the id you want to change.
      */
     public void setIdOwner (int idOwner) {
 
         this.idOwner = idOwner; }    
     
     /**
-     * [setNamePet description]
-     * @param namePet [description]
+     * Allows to change the name of pet.
+     * @param namePet - enter the name of the pet you want to change.
      */
     public void setNamePet (String namePet) {
 
         this.namePet = namePet; } 
     /**
-     * [setclinicalH description]
-     * @param clinicalH [description]
+     * Allows to change the arrayList of clinical History.
+     * @param clinicalH -  enter the arrayLsit of clinical history you want to change.
      */
     public void setclinicalH (ArrayList<ClinicalH> clinicalH) {
 
